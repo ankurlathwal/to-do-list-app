@@ -1,15 +1,15 @@
 {
   "name": "uncorkd-project",
   "version": "1.0.0",
-  "description": "",
+  "description": "Node.js application for Uncorkd Hiring Full Stack App Project",
   "main": "index.js",
   "scripts": {
     "compile": "webpack",
     "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["node","heroku","bitbucket","uncorkd"],
+  "author": "Ankur Lathwal",
   "license": "ISC",
   "dependencies": {
     "babel-core": "^6.26.0",
