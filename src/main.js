@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-var url      = window.location.href; 
-console.log(url.toString());
+// The App component - top level react component for the application. 
+//This will contain all other React components
 
 class App extends React.Component {
   
