@@ -25,4 +25,10 @@ module.exports = {
      path.join(__dirname, 'node_modules'),
    ],
  },
+ node: {
+  console: false,
+  fs: 'empty',
+  net: 'empty',
+  tls: 'empty'
+}
 };

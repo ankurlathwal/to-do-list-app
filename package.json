@@ -8,7 +8,12 @@
     "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["node","heroku","bitbucket","uncorkd"],
+  "keywords": [
+    "node",
+    "heroku",
+    "bitbucket",
+    "uncorkd"
+  ],
   "author": "Ankur Lathwal",
   "license": "ISC",
   "dependencies": {
@@ -16,9 +21,12 @@
     "babel-loader": "^7.1.2",
     "babel-preset-latest": "^6.24.1",
     "babel-preset-react": "^6.24.1",
+    "cookie-parser": "^1.4.3",
     "express": "^4.16.1",
+    "express-session": "^1.15.6",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
+    "react-router-dom": "^4.2.2",
     "webpack": "^3.6.0",
     "webpack-dev-middleware": "^1.12.0"
   }
