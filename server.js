@@ -31,16 +31,16 @@ var ssn;
 // Listen to requests using get method 
 // Send the number of visits user has made till now using req.page_views
 app.get('/session', function(req, res){
-  ssn = req.session;
-  
-  if(ssn.page_views){
-     ssn.page_views++;
 
-  } else {
-     ssn.page_views = 1;
-     ssn.code = req.query.code;
-  }
-  res.send(ssn.code);
+      ssn = req.session;
+      if(ssn.page_views){
+        ssn.page_views++;
+
+      } else {
+        ssn.page_views = 1;
+        ssn.code = req.query.code;
+      }
+      res.send({user: ssn.code, visit: ssn.page_views});
 });
 
 
