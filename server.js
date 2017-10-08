@@ -7,11 +7,14 @@ var mongoose = require('mongoose');
 const database = require('./database.js');
 var cookieParser = require('cookie-parser');
 var session = require('express-session');
+var bodyParser = require('body-parser');
 
  
 // using webpack to bundle javascript
 const compiler = webpack(webpackConfig);
  
+// use body-parser to parse POST data in json
+app.use(bodyParser.json());
 // serve static files
 app.use(express.static(__dirname + '/www'));
 
@@ -48,12 +51,12 @@ app.get('/session', function(req, res){
 
 app.post('/user',function (req,res) {
 
-  //var userInfo = req.body;
-  //console.log(req.body);
+    var userInfo = req.body;
+    
   
     var User = mongoose.model("User");
     var newUser = new User({
-      name: "Vicky"
+      name: userInfo.name
     }); 
   
 

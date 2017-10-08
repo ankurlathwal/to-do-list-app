@@ -40,7 +40,7 @@ componentDidMount() {
     // xhr.send(null);
 
     
-    var user = {"name": 'JoJO'};
+    var user = {"name": "JoJO"};
     //console.log(JSON.stringify(user));
     var xhr = new XMLHttpRequest();
     var status = false;
