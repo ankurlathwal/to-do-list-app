@@ -3,8 +3,11 @@ const webpackDevMiddleware = require('webpack-dev-middleware');
 const webpack = require('webpack');
 const webpackConfig = require('./webpack.config.js');
 const app = express();
+var mongoose = require('mongoose');
+const database = require('./database.js');
 var cookieParser = require('cookie-parser');
 var session = require('express-session');
+
  
 // using webpack to bundle javascript
 const compiler = webpack(webpackConfig);
@@ -42,6 +45,26 @@ app.get('/session', function(req, res){
       }
       res.send({user: ssn.code, visit: ssn.page_views});
 });
+
+app.post('/user',function (req,res) {
+
+  //var userInfo = req.body;
+  //console.log(req.body);
+  
+    var User = mongoose.model("User");
+    var newUser = new User({
+      name: "Vicky"
+    }); 
+  
+
+    newUser.save(function(err, User){
+      if(err)
+         res.send({message: "Database error", type: "error"});
+      else
+         res.send( {
+            message: "New person added", type: "success"});
+   });
+  });
 
 
 // the app would listen to either the environment port or 3000 by default
