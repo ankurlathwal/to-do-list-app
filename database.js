@@ -7,6 +7,6 @@ console.log(mongoose.connection.readyState);
 var userSchema = mongoose.Schema({
     name: String,
     data: Array,
-  });
-var User = mongoose.model("User", userSchema);
+  },{collection:'user'});
+var User = mongoose.model("user", userSchema);
 
