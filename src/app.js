@@ -96,8 +96,13 @@ updateList(event){
 render(){
     return(
       <div>
-          <p className="example">Hi {this.state.user}! This is your visit number: {this.state.visit}</p>
-          <p className="data">This is your data: {this.state.data}</p>
+          <p className="example">Hi {this.state.user}!</p>
+          <p className="data">This is your list:</p>
+          <ul>
+          {this.state.data.map(function(listValue){
+            return <li>{listValue}</li>;
+          })}
+        </ul>
           <form onSubmit={this.updateList}>
             <input type="text" ref={el => this.element = el} />
             <button type="submit" value="submit">Add</button>
