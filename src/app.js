@@ -96,16 +96,20 @@ updateList(event){
 render(){
     return(
       <div>
-          <p className="example">Hi {this.state.user}!</p>
+          <h2 className="example">Hi {this.state.user}!</h2>
+          <p>Your list link: <a href={window.location.href.split('?')[0] + "?code=" + this.state.user} target="_blank">
+          {this.state.user}</a></p>
           <p className="data">This is your list:</p>
           <ul>
           {this.state.data.map(function(listValue){
             return <li>{listValue}</li>;
           })}
         </ul>
-          <form onSubmit={this.updateList}>
-            <input type="text" ref={el => this.element = el} />
-            <button type="submit" value="submit">Add</button>
+          <form onSubmit={this.updateList} className="form-inline">
+          <div className="form-group">
+            <input type="text" ref={el => this.element = el} className="form-control"/>
+            <button type="submit" value="submit" className="btn btn-success">Add</button>
+          </div>  
           </form>
       </div>
     );

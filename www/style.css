@@ -1,0 +1,17 @@
+li{
+  border-left: 2px greenyellow solid; 
+  padding: 5px; 
+  margin-bottom: 5px; 
+  margin-left: 0px;
+  background-color: white;
+  box-shadow: 10px 10px 5px #888888;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+}
+
+form{
+    margin-top: 20px;
+}
