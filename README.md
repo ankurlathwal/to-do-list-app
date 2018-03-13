@@ -1,8 +1,7 @@
-#To-do List App
-##Project for Uncorkd
-###Built in Node.js (Express REST API), ReactJS, Bootstrap and MongoDB
-####Platform - Heroku 
-####Codebase - BitBucket
+# To-do List App
+## Built using Node.js (Express REST API), ReactJS, Bootstrap and MongoDB
+### Platform - Heroku 
+
 
 Link to App
 ---
